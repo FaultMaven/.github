@@ -35,13 +35,3 @@ docker compose up
 -----
 
 *Maintained by the FaultMaven Engineering Team.*
-
-```
-
-### Next Step: Pin *These* Repositories
-Once you update the README text, go back to your **Overview** page, click **Customize pins**, and select the specific repos that match your new table:
-1.  `faultmaven` (Backend)
-2.  `faultmaven-dashboard`
-3.  `faultmaven-copilot`
-4.  `faultmaven-deploy` (Optional, but great for visibility)
-```
