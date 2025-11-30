@@ -11,18 +11,18 @@ We are building the intelligence layer that eliminates context-switching and red
 
 | Component | Description | Tech Stack |
 | :--- | :--- | :--- |
-| **[Backend Core](https://github.com/FaultMaven/fm-case-service)** | The central nervous system. Ingests logs, traces, and metrics. | `Go` `gRPC` `Postgres` |
-| **[Dashboard](https://github.com/FaultMaven/fm-dashboard)** | The mission control center for SREs and Developers. | `React` `TypeScript` |
-| **[Copilot](https://github.com/FaultMaven/fm-copilot)** | AI-driven analysis to root cause incidents faster. | `Python` `LLM` |
+| **[Backend Core](https://github.com/FaultMaven/faultmaven)** | The central nervous system. Ingests logs, traces, and metrics. | `Python` `FastAPI` |
+| **[Dashboard](https://github.com/FaultMaven/faultmaven-dashboard)** | The mission control center for SREs and Developers. | `TypeScript` `React` |
+| **[Copilot](https://github.com/FaultMaven/faultmaven-copilot)** | AI-driven analysis to root cause incidents faster. | `TypeScript` `Chrome Ext` |
 
 ### 🚀 Getting Started
 
-New to FaultMaven? Start with the backend service:
+New to FaultMaven? Spin up the full stack with Docker Compose:
 
 ```bash
-# Clone the core service
-git clone [https://github.com/FaultMaven/fm-case-service.git](https://github.com/FaultMaven/fm-case-service.git)
-cd fm-case-service
+# Clone the quickstart deployment repo
+git clone [https://github.com/FaultMaven/faultmaven-deploy.git](https://github.com/FaultMaven/faultmaven-deploy.git)
+cd faultmaven-deploy
 docker compose up
 ````
 
@@ -38,11 +38,10 @@ docker compose up
 
 ```
 
-### Final Instructions:
-1.  **Paste** the code above into the big text box.
-2.  **Edit the Links:** I put placeholders for the repo links (like `fm-dashboard` or `fm-copilot`). Make sure those match your actual repository names.
-3.  **Click "Commit changes..."** (Top Right).
-4.  **Confirm:** A small box will pop up asking for a "Commit message." You can just leave the default "Create README.md" and click the green **Commit changes** button again.
-
-Once you do that, go to your main profile page (`github.com/FaultMaven`), and you will see this beautiful landing page!
+### Next Step: Pin *These* Repositories
+Once you update the README text, go back to your **Overview** page, click **Customize pins**, and select the specific repos that match your new table:
+1.  `faultmaven` (Backend)
+2.  `faultmaven-dashboard`
+3.  `faultmaven-copilot`
+4.  `faultmaven-deploy` (Optional, but great for visibility)
 ```
