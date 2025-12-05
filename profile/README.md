@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="https://faultmaven.ai/logo.svg" alt="FaultMaven" width="200" />
+  <img src="fm-logo-light.svg" alt="FaultMaven" width="200" />
 </p>
 
 <h1 align="center">FaultMaven</h1>
