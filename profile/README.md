@@ -43,14 +43,17 @@ Your observability tools tell you *what* is broken. Generic LLMs guess *why*, bu
 
 **FaultMaven bridges this gap.**
 
+Learn more: [Product Overview](https://faultmaven.ai/product) · [Use Cases](https://faultmaven.ai/use-cases) · [Architecture](https://github.com/FaultMaven/FaultMaven#architecture)
+
 ## What Is FaultMaven?
 FaultMaven is an **open-source AI copilot** that connects your full stack—logs, metrics, traces, configs, and code—to a unified knowledge engine. It combines:
 
 * **Deep Context Awareness** — Correlates your entire stack, not just error snippets.
 * **Tiered Knowledge Engine** — Global patterns + Team runbooks + Personal context.
 * **Zero Context-Switching** — Browser extension overlays intelligence on your existing tools.
+* **Continuous Learning** — Every resolved case becomes institutional knowledge, automatically indexed and searchable. The system gets smarter about your infrastructure with every problem you solve.
 
-The result: faster incident resolution, institutional memory that compounds, and engineers who spend less time firefighting.
+The result: faster troubleshooting, institutional memory that compounds, and engineers who spend less time firefighting.
 
 ## Key Features
 * 🔍 **Context-Aware Analysis:** Automatically correlates logs with relevant code commits and documentation.
@@ -63,10 +66,10 @@ The result: faster incident resolution, institutional memory that compounds, and
 ## Quick Start
 
 ```bash
-git clone [https://github.com/FaultMaven/faultmaven-deploy.git](https://github.com/FaultMaven/faultmaven-deploy.git) && cd faultmaven-deploy
+git clone https://github.com/FaultMaven/faultmaven-deploy.git && cd faultmaven-deploy
 cp .env.example .env      # Add your OPENAI_API_KEY
 ./faultmaven start        # Validates env, starts all services
-````
+```
 
 **Dashboard:** http://localhost:3000 — **API:** http://localhost:8090
 
@@ -129,6 +132,8 @@ graph TD
 | [fm-case-service](https://github.com/FaultMaven/fm-case-service) | Investigation tracking |
 | [fm-evidence-service](https://github.com/FaultMaven/fm-evidence-service) | File/log uploads |
 | [fm-auth-service](https://github.com/FaultMaven/fm-auth-service) | Authentication |
+| [fm-session-service](https://github.com/FaultMaven/fm-session-service) | Session persistence |
+| [fm-job-worker](https://github.com/FaultMaven/fm-job-worker) | Background task processing |
 
 ### Clients
 
@@ -143,7 +148,7 @@ graph TD
 
 FaultMaven follows an Open Box / Black Box philosophy:
 
-| | Open Source | Cloud / Enterprise |
+| | Self-Hosted | Enterprise Cloud |
 | :--- | :--- | :--- |
 | **Philosophy** | Open Box — full transparency | Black Box — zero ops |
 | **Hosting** | Self-hosted (Docker) | Managed SaaS |
@@ -165,15 +170,29 @@ Works with your preferred provider:
 
 ## Contributing
 
-We build in the open. PRs welcome.
+We build in the open and welcome all contributions—code, documentation, bug reports, feature ideas, or just feedback.
 
-### Fork a service repo, make changes, submit PR
+**Ways to Contribute:**
 
+- **Code:** Pick up a [`good-first-issue`](https://github.com/search?q=org%3AFaultMaven+label%3A%22good+first+issue%22+state%3Aopen) or propose a new feature
+- **Documentation:** Improve guides, add examples, fix typos
+- **Knowledge Base:** Contribute troubleshooting patterns for the Global KB
+- **Testing:** Report bugs, test edge cases, improve test coverage
+- **Community:** Answer questions in [Discussions](https://github.com/FaultMaven/faultmaven/discussions), help other users
+
+See [CONTRIBUTING.md](https://github.com/FaultMaven/FaultMaven/blob/main/CONTRIBUTING.md) for detailed guidelines.
+
+**Example workflow:**
 ```bash
-git clone [https://github.com/YOUR_USERNAME/fm-agent-service.git](https://github.com/YOUR_USERNAME/fm-agent-service.git)
-```
+# 1. Fork and clone a service repository
+git clone https://github.com/YOUR_USERNAME/fm-agent-service.git
+cd fm-agent-service
 
-See [CONTRIBUTING.md](https://github.com/FaultMaven/FaultMaven/blob/main/CONTRIBUTING.md) for guidelines.
+# 2. Run the full stack locally for testing
+cd ../faultmaven-deploy && docker compose up -d
+
+# 3. Make changes, test, submit PR
+```
 
 -----
 
