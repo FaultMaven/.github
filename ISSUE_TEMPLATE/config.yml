@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Questions & Discussion
+    url: https://github.com/FaultMaven/faultmaven/discussions
+    about: Ask questions and share ideas with the community
+  - name: 📖 Documentation
+    url: https://github.com/FaultMaven/faultmaven
+    about: Check the documentation before opening an issue
+  - name: 🔒 Security Vulnerabilities
+    url: https://github.com/FaultMaven/.github/blob/main/SECURITY.md
+    about: Report security issues privately (do not open public issues)
