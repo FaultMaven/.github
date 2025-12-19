@@ -117,7 +117,7 @@ cp .env.example .env && ./faultmaven start
 
 ## Open Source & Cloud
 
-**Self-Hosted** — Full control. Free forever. Apache 2.0.
+**FaultMaven Core** — Full control. Free forever. Apache 2.0.
 Run on your infrastructure with your choice of LLM (OpenAI, Anthropic, or local via Ollama).
 
 **Cloud** — Zero ops. Pre-loaded knowledge base. Team features.

@@ -32,7 +32,7 @@ Include:
 
 ## Security Best Practices
 
-For self-hosted deployment security guidance, see:
+For FaultMaven Core deployment security guidance, see:
 [Security Guide](https://github.com/FaultMaven/faultmaven/blob/main/docs/SECURITY.md)
 
 ## Recognition
