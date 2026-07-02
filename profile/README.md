@@ -3,7 +3,7 @@
   <img src="design-dark.svg" alt="FaultMaven" width="180" />
 </p>
 
-<h1 align="center">FaultMaven</h1>
+<h1 align="center"></h1>
 
 <p align="center">
   <strong>The AI-Powered Troubleshooting Copilot for Modern Engineering</strong>
