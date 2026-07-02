@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="fmlogo-darktext-transparent.svg" alt="FaultMaven" width="180" />
+  <img src="design-dark.svg" alt="FaultMaven" width="180" />
 </p>
 
 <h1 align="center">FaultMaven</h1>
