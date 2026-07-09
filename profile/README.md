@@ -10,12 +10,12 @@
 </p>
 
 <p align="center">
-  Stop context-switching. Start fixing.
+  Built to solve, not to chat. Troubleshoots like an engineer — learns like a team.
 </p>
 
 <p align="center">
   <a href="https://github.com/FaultMaven/faultmaven">
-    <img src="https://img.shields.io/badge/Deploy_Now-Open_Source-blue?style=for-the-badge" alt="Deploy" />
+    <img src="https://img.shields.io/badge/Deploy_Now-Self--Hosted-blue?style=for-the-badge" alt="Deploy" />
   </a>
   &nbsp;
   <a href="https://faultmaven.ai/founders">
@@ -29,7 +29,7 @@
 
 <p align="center">
   <a href="https://github.com/FaultMaven/faultmaven/blob/main/LICENSE">
-    <img src="https://img.shields.io/badge/License-Apache_2.0-blue.svg" alt="License" />
+    <img src="https://img.shields.io/badge/License-FSL--1.1--ALv2-blue.svg" alt="License" />
   </a>
   <a href="https://www.python.org/downloads/">
     <img src="https://img.shields.io/badge/Python-3.11%2B-blue.svg" alt="Python" />
@@ -53,12 +53,12 @@ You end up copy-pasting logs into ChatGPT, losing context, and solving the same 
 
 ## What Is FaultMaven?
 
-An open-source AI copilot that connects your full stack—logs, metrics, traces, configs, and code—to a unified knowledge engine.
+FaultMaven is an AI-powered troubleshooting copilot. It works a problem the way a seasoned engineer does — and never forgets what it learns.
 
-- **Deep Context Awareness** — Correlates your entire stack, not just error snippets
-- **Tiered Knowledge Engine** — Global patterns + Team runbooks + Personal context
-- **Zero Context-Switching** — Browser extension overlays intelligence on your existing tools
-- **Continuous Learning** — Every resolved case becomes searchable institutional knowledge
+- **Goal-driven** — it works toward a solution, not just a reply
+- **Methodical** — it follows a proven diagnostic method; it doesn't jump to conclusions
+- **Evidence-based** — every step is grounded in your data (logs, metrics, configs, past fixes), and it shows its work
+- **Self-learning** — every problem it solves becomes knowledge it reuses
 
 ---
 
@@ -66,10 +66,11 @@ An open-source AI copilot that connects your full stack—logs, metrics, traces,
 
 ```bash
 git clone https://github.com/FaultMaven/faultmaven.git && cd faultmaven
-cp .env.example .env && ./faultmaven.sh start
+cp .env.example .env   # set ONE LLM provider API key (or CHAT_PROVIDER=local)
+./faultmaven.sh start
 ```
 
-**Dashboard:** http://localhost:3000 — **API:** http://localhost:8000
+**Dashboard:** http://localhost:3333 — **API:** http://localhost:8090
 
 → [Full deployment guide](https://github.com/FaultMaven/faultmaven#quick-start)
 
@@ -85,7 +86,7 @@ FaultMaven uses a **modular monolith** architecture—a single FastAPI backend o
                             HTTPS
                               v
 +------------------------------------------------------------------+
-|                   FaultMaven API (Port 8000)                    |
+|                   FaultMaven API (Port 8090)                    |
 |                                                                  |
 |  +------------------------------------------------------------+  |
 |  |                       API Layer                            |  |
@@ -110,7 +111,7 @@ FaultMaven uses a **modular monolith** architecture—a single FastAPI backend o
 
 | Module | Status | Description |
 | :--- | :---: | :--- |
-| **agent** | ✅ Active | Investigation orchestration, AI tools, OODA framework |
+| **agent** | ✅ Active | Investigation orchestration, AI tools, milestone-based investigation |
 | **auth** | ✅ Active | Users, sessions, organizations, teams, RBAC |
 | **case** | ✅ Active | Investigation cases and lifecycle management |
 | **evidence** | ✅ Active | File uploads, metadata, storage adapters |
@@ -173,45 +174,44 @@ The following microservices are being consolidated into the main `faultmaven` mo
 
 ---
 
-## Open Source & Cloud
+## Standalone & Cloud
 
-FaultMaven runs on a single, deployment-agnostic **Core**. Choose the edition that fits your needs:
+FaultMaven runs on a single, deployment-agnostic **Core** — fair-source (FSL-1.1-ALv2) in both deployments. Choose the deployment that fits your needs:
 
-### FaultMaven Open Source (Self-Hosted)
+### FaultMaven Standalone (Self-Hosted)
 
-**Best for:** Individuals, teams, and air-gapped environments
+**Best for:** Individuals, contributors, and air-gapped environments
 
-- **Full Control:** Run on your own infrastructure (Docker, local, or Kubernetes)
+- **Full Control:** You own and operate the stack — Docker or a plain server process
 - **Privacy First:** All data stays on your hardware—never leaves your network
-- **Build Your Own Knowledge:** Start with a clean slate and build a personal knowledge base tailored to your needs
+- **Knowledge from Day 1:** Ships with the global runbook pack; ingest your own runbooks into a personal knowledge base
 - **Offline Capable:** Run entirely offline with local LLMs (Ollama, vLLM)
-- **Free Forever:** Apache 2.0 license—no usage limits, no subscription fees
+- **Free:** Fair-source (FSL-1.1-ALv2) — source-available, converts to Apache-2.0 two years after each release. No usage limits, no subscription fees
 
 **Deploy in 5 minutes:** [Quick Start Guide](https://github.com/FaultMaven/faultmaven#quick-start)
 
-### FaultMaven Cloud (SaaS)
+### FaultMaven Cloud (FaultMaven-Hosted SaaS)
 
 **Best for:** Engineering teams requiring collaboration and institutional scale
 
 - **Managed Infrastructure:** Production-grade Kubernetes, auto-scaling, zero-downtime updates
-- **Pre-Built Intelligence:** Starts with a global knowledge base of industry-standard troubleshooting guides
-- **3-Tier Knowledge Architecture:** Global + Team + Personal knowledge layers
-- **Team Collaboration:** Shared runbooks, incident logs, institutional memory
+- **3-Tier Knowledge:** Global + Team + Personal knowledge scopes
+- **Team Collaboration:** Shared runbooks and institutional memory across your org
 - **Enterprise Security:** SSO (SAML/OIDC), SOC 2 ready
 
 **Join the beta:** [Beta Founders Program](https://faultmaven.ai/founders)
 
 ### Comparison
 
-| Feature | Open Source | Cloud |
-|---------|-------------|-------|
+| Feature | Standalone (Self-Hosted) | Cloud (FaultMaven-Hosted) |
+|---------|--------------------------|---------------------------|
 | **Deployment** | Docker / Self-Hosted | Managed Kubernetes |
-| **Knowledge Base** | Empty (user builds) | Pre-loaded global KB |
-| **Knowledge Tiers** | Personal only | Global + Team + Personal |
-| **Infrastructure** | User-managed (SQLite) | Fully managed (PostgreSQL, S3) |
+| **Knowledge Base** | Ships with the global runbook pack | Ships with the global runbook pack |
+| **Knowledge Scopes** | Global + Personal | Global + Team + Personal |
+| **Infrastructure** | Fixed defaults (SQLite) | Fully managed (PostgreSQL, S3) |
 | **LLM Support** | All providers + local | All cloud providers |
 | **Security** | Local auth | SSO, RBAC, SOC 2 |
-| **Cost** | Free forever | Free during beta |
+| **Cost** | Free | Free during beta |
 
 ---
 
@@ -224,7 +224,7 @@ FaultMaven runs on a single, deployment-agnostic **Core**. Choose the edition th
 ### 🚀 Deploy
 
 Self-host in 5 minutes.
-Free forever.
+Free, fair-source.
 
 **[Get Started →](https://github.com/FaultMaven/faultmaven#quick-start)**
 
@@ -288,7 +288,7 @@ FaultMaven is model-agnostic, giving you freedom to choose the best intelligence
 ---
 
 <p align="center">
-  <strong>FaultMaven</strong> — Your AI copilot for troubleshooting.
+  <strong>FaultMaven</strong> — your AI troubleshooting copilot. Built to solve, not to chat.
 </p>
 
 <p align="center">
