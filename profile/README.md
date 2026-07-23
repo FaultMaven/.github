@@ -130,9 +130,11 @@ FaultMaven uses a **modular monolith** architecture—a single FastAPI backend o
 
 | Repository | Description |
 | :--- | :--- |
-| [faultmaven](https://github.com/FaultMaven/faultmaven) | Main API (modular monolith) |
-| [faultmaven-copilot](https://github.com/FaultMaven/faultmaven-copilot) | Browser extension |
+| [faultmaven](https://github.com/FaultMaven/faultmaven) | Core API (modular monolith) |
 | [faultmaven-dashboard](https://github.com/FaultMaven/faultmaven-dashboard) | React 19 web UI |
+| [faultmaven-copilot](https://github.com/FaultMaven/faultmaven-copilot) | Browser extension |
+| [faultmaven-slack-agent](https://github.com/FaultMaven/faultmaven-slack-agent) | Slack agent |
+| [faultmaven-website](https://github.com/FaultMaven/faultmaven-website) | Marketing site &amp; docs |
 
 </td>
 <td width="50%" valign="top">
@@ -197,7 +199,7 @@ FaultMaven runs on a single, deployment-agnostic **Core** — fair-source (FSL-1
 - **Managed Infrastructure:** Production-grade Kubernetes, auto-scaling, zero-downtime updates
 - **3-Tier Knowledge:** Global + Team + Personal knowledge scopes
 - **Team Collaboration:** Shared runbooks and institutional memory across your org
-- **Enterprise Security:** SSO (SAML/OIDC), SOC 2 ready
+- **SSO & Compliance:** SSO (SAML/OIDC), SOC 2 ready
 
 **Join the beta:** [Beta Founders Program](https://faultmaven.ai/founders)
 
