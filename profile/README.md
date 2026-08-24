@@ -14,6 +14,10 @@
 </p>
 
 <p align="center">
+  <a href="https://chromewebstore.google.com/detail/faultmaven-copilot/fghoagggojmkdopidfopijfnlmchjcng">
+    <img src="https://img.shields.io/badge/Chrome_Web_Store-Install_Copilot-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Install FaultMaven Copilot from the Chrome Web Store" />
+  </a>
+  &nbsp;
   <a href="https://github.com/FaultMaven/faultmaven">
     <img src="https://img.shields.io/badge/Deploy_Now-Self--Hosted-blue?style=for-the-badge" alt="Deploy" />
   </a>
@@ -132,8 +136,8 @@ FaultMaven uses a **modular monolith** architecture—a single FastAPI backend o
 | :--- | :--- |
 | [faultmaven](https://github.com/FaultMaven/faultmaven) | Core API (modular monolith) |
 | [faultmaven-dashboard](https://github.com/FaultMaven/faultmaven-dashboard) | React 19 web UI |
-| [faultmaven-copilot](https://github.com/FaultMaven/faultmaven-copilot) | Browser extension |
-| [faultmaven-slack-agent](https://github.com/FaultMaven/faultmaven-slack-agent) | Slack agent |
+| [faultmaven-copilot](https://github.com/FaultMaven/faultmaven-copilot) | Browser extension — [on the Chrome Web Store](https://chromewebstore.google.com/detail/faultmaven-copilot/fghoagggojmkdopidfopijfnlmchjcng) |
+| [faultmaven-slack-agent](https://github.com/FaultMaven/faultmaven-slack-agent) | Slack agent — coming soon to the Slack Marketplace |
 | [faultmaven-website](https://github.com/FaultMaven/faultmaven-website) | Marketing site &amp; docs |
 
 </td>
@@ -266,7 +270,7 @@ Generic chatbots can't access your logs, configs, or deployments. FaultMaven cor
 
 ### 2. Zero Context-Switching
 
-The **[FaultMaven Copilot](https://github.com/FaultMaven/faultmaven-copilot)** browser extension overlays AI troubleshooting directly onto your existing tools—AWS Console, Datadog, Grafana, or localhost. No backend agents, webhooks, or complex integrations required.
+The **[FaultMaven Copilot](https://chromewebstore.google.com/detail/faultmaven-copilot/fghoagggojmkdopidfopijfnlmchjcng)** browser extension — now on the Chrome Web Store — overlays AI troubleshooting directly onto your existing tools—AWS Console, Datadog, Grafana, or localhost. No backend agents, webhooks, or complex integrations required.
 
 **How it works:** FaultMaven lives in your browser, not your cluster. As you view logs in CloudWatch, traces in Datadog, or pods in the Kubernetes dashboard, the Copilot extension captures the relevant context and correlates it with your Knowledge Base in real-time.
 
