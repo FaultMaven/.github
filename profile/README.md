@@ -22,8 +22,8 @@
     <img src="https://img.shields.io/badge/Deploy_Now-Self--Hosted-blue?style=for-the-badge" alt="Deploy" />
   </a>
   &nbsp;
-  <a href="https://faultmaven.ai/founders">
-    <img src="https://img.shields.io/badge/Join-Beta_Founders-green?style=for-the-badge" alt="Beta Founders" />
+  <a href="https://app.faultmaven.ai/">
+    <img src="https://img.shields.io/badge/Cloud_Beta-Try_It_Free-green?style=for-the-badge" alt="Try FaultMaven Cloud beta" />
   </a>
   &nbsp;
   <a href="https://faultmaven.ai">
@@ -42,6 +42,30 @@
     <img src="https://img.shields.io/badge/FastAPI-0.115%2B-009688.svg" alt="FastAPI" />
   </a>
 </p>
+
+---
+
+## Cloud beta is open
+
+You can sign up at **[app.faultmaven.ai](https://app.faultmaven.ai/)** with an email address and work a case in your browser a minute later — no waiting list, no invite code, nothing to install. It is free while it is in beta. We are opening it to find out whether FaultMaven is useful to people who are not us, so if you try it we would like to hear what you think.
+
+**Want to look before signing up for anything?** Two ways, both free of accounts:
+
+- **Read a real one** — [a complete investigation transcript](https://www.faultmaven.ai/investigation), unedited, including the points where FaultMaven refused to name a cause the evidence did not support.
+- **Put a problem to it** — FaultMaven is installed in the [FaultMaven Community Slack](https://join.slack.com/t/faultmaven-community/shared_invite/zt-493fv3w3o-mPBBI2v3mMYQKS4649mY1A). Join and @mention it in a channel. That workspace is shared and public, so it is the right place for a real but unremarkable problem and the wrong place for production secrets.
+
+**Standalone has not changed.** Self-hosting is still free, still fair-source, still runs air-gapped, and is not going anywhere.
+
+<details>
+<summary><strong>What "beta" means →</strong></summary>
+
+- **Check its work.** FaultMaven runs on large language models. Its hypotheses, the data it asks for and the fixes it proposes can be incomplete, misleading or simply wrong — and it can be wrong confidently. FaultMaven proposes; you approve and execute. It has no access to your infrastructure and takes no action on your systems.
+- **It is beta software.** Expect rough edges and occasional downtime. Provided as is, without warranty — see the [Terms](https://www.faultmaven.ai/terms).
+- **Mind what you paste.** FaultMaven stores the cases and files you give it, because reusing them is how it improves. Do not paste production secrets or customer data you would not want stored.
+- **Accounts do not merge.** Sign up with a personal address now and move to a company one later, and that is a new account — there is no migration, and your beta cases do not follow you.
+- **Free during beta.** Pricing will be announced before general availability.
+
+</details>
 
 ---
 
@@ -137,7 +161,7 @@ FaultMaven uses a **modular monolith** architecture—a single FastAPI backend o
 | [faultmaven](https://github.com/FaultMaven/faultmaven) | Core API (modular monolith) |
 | [faultmaven-dashboard](https://github.com/FaultMaven/faultmaven-dashboard) | React 19 web UI |
 | [faultmaven-copilot](https://github.com/FaultMaven/faultmaven-copilot) | Browser extension — [on the Chrome Web Store](https://chromewebstore.google.com/detail/faultmaven-copilot/fghoagggojmkdopidfopijfnlmchjcng) |
-| [faultmaven-slack-agent](https://github.com/FaultMaven/faultmaven-slack-agent) | Slack agent — coming soon to the Slack Marketplace |
+| [faultmaven-slack-agent](https://github.com/FaultMaven/faultmaven-slack-agent) | Slack agent — [try it in the Community Slack](https://join.slack.com/t/faultmaven-community/shared_invite/zt-493fv3w3o-mPBBI2v3mMYQKS4649mY1A); workspaces connected by hand during beta |
 | [faultmaven-website](https://github.com/FaultMaven/faultmaven-website) | Marketing site &amp; docs |
 
 </td>
@@ -194,7 +218,7 @@ FaultMaven runs on a single, deployment-agnostic **Core** — fair-source (FSL-1
 - **Offline Capable:** Run entirely offline with local LLMs (Ollama, vLLM)
 - **Free:** Fair-source (FSL-1.1-ALv2) — source-available, converts to Apache-2.0 two years after each release. No usage limits, no subscription fees
 
-**Deploy in 5 minutes:** [Quick Start Guide](https://github.com/FaultMaven/faultmaven#quick-start)
+**One command, 10–20 minutes on a first run** — most of it pulling a 2.3 GB image that carries its own embedding model, which is what lets it run offline: [Quick Start Guide](https://github.com/FaultMaven/faultmaven#quick-start)
 
 ### FaultMaven Cloud (FaultMaven-Hosted SaaS)
 
@@ -203,9 +227,9 @@ FaultMaven runs on a single, deployment-agnostic **Core** — fair-source (FSL-1
 - **Managed Infrastructure:** Production-grade Kubernetes, auto-scaling, zero-downtime updates
 - **3-Tier Knowledge:** Global + Team + Personal knowledge scopes
 - **Team Collaboration:** Shared runbooks and institutional memory across your org
-- **SSO & Compliance:** SSO (SAML/OIDC), SOC 2 ready
+- **SSO & Access Control:** SSO (SAML/OIDC), organizations, teams and roles
 
-**Join the beta:** [Beta Founders Program](https://faultmaven.ai/founders)
+**Beta is open:** [sign up at app.faultmaven.ai](https://app.faultmaven.ai/) — free while it is in beta
 
 ### Comparison
 
@@ -216,7 +240,7 @@ FaultMaven runs on a single, deployment-agnostic **Core** — fair-source (FSL-1
 | **Knowledge Scopes** | Global + Personal | Global + Team + Personal |
 | **Infrastructure** | Fixed defaults (SQLite) | Fully managed (PostgreSQL, S3) |
 | **LLM Support** | All providers + local | All cloud providers |
-| **Security** | Local auth | SSO, RBAC, SOC 2 |
+| **Security** | Local auth | SSO, RBAC |
 | **Cost** | Free | Free during beta |
 
 ---
@@ -229,8 +253,8 @@ FaultMaven runs on a single, deployment-agnostic **Core** — fair-source (FSL-1
 
 ### 🚀 Deploy
 
-Self-host in 5 minutes.
-Free, fair-source.
+Self-host it, free.
+Fair-source, runs air-gapped.
 
 **[Get Started →](https://github.com/FaultMaven/faultmaven#quick-start)**
 
@@ -272,14 +296,14 @@ Generic chatbots can't access your logs, configs, or deployments. FaultMaven cor
 
 The **[FaultMaven Copilot](https://chromewebstore.google.com/detail/faultmaven-copilot/fghoagggojmkdopidfopijfnlmchjcng)** browser extension — now on the Chrome Web Store — overlays AI troubleshooting directly onto your existing tools—AWS Console, Datadog, Grafana, or localhost. No backend agents, webhooks, or complex integrations required.
 
-**How it works:** FaultMaven lives in your browser, not your cluster. As you view logs in CloudWatch, traces in Datadog, or pods in the Kubernetes dashboard, the Copilot extension captures the relevant context and correlates it with your Knowledge Base in real-time.
+**How it works:** FaultMaven lives in your browser, not your cluster. Paste a log, upload a config, type a question — or, when it helps, capture the page you are looking at in CloudWatch, Datadog or the Kubernetes dashboard. Capture is something you ask for, not something running in the background: the extension reads a page only when you tell it to, and plenty of investigations never touch one.
 
 ### 3. The Knowledge Flywheel
 
 Most troubleshooting knowledge is lost once the incident is closed. FaultMaven turns that lost data into a growing asset:
 
 - **Seed with Runbooks:** Pre-load your existing runbooks and documentation so the AI knows your standard operating procedures from Day 1
-- **Grow with Incidents:** As you troubleshoot, the AI learns. When a case is resolved, FaultMaven extracts the successful steps and root cause to automatically update the knowledge base
+- **Grow with Incidents:** As you troubleshoot, the AI learns. When a case is resolved, FaultMaven offers to turn the successful steps and root cause into a runbook — you decide what goes into the knowledge base
 - **Result:** Your static documentation becomes a dynamic, self-improving engine. Today's incident solution becomes tomorrow's automated fix
 
 ### 4. Flexible Multi-LLM Support
@@ -301,6 +325,6 @@ FaultMaven is model-agnostic, giving you freedom to choose the best intelligence
   <sub>
     <a href="https://faultmaven.ai">Website</a> ·
     <a href="https://github.com/FaultMaven/faultmaven">Documentation</a> ·
-    <a href="https://faultmaven.ai/founders">Beta Founders</a>
+    <a href="https://join.slack.com/t/faultmaven-community/shared_invite/zt-493fv3w3o-mPBBI2v3mMYQKS4649mY1A">Community Slack</a>
   </sub>
 </p>
