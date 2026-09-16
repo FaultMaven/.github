@@ -227,7 +227,7 @@ FaultMaven runs on a single, deployment-agnostic **Core** — fair-source (FSL-1
 - **Managed Infrastructure:** Production-grade Kubernetes, auto-scaling, zero-downtime updates
 - **3-Tier Knowledge:** Global + Team + Personal knowledge scopes
 - **Team Collaboration:** Shared runbooks and institutional memory across your org
-- **SSO & Access Control:** SSO (SAML/OIDC), organizations, teams and roles
+- **SSO & Isolation:** SSO (SAML/OIDC), per-enterprise data isolation, and teams formed by consent
 
 **Beta is open:** [sign up at app.faultmaven.ai](https://app.faultmaven.ai/) — free while it is in beta
 
@@ -240,7 +240,7 @@ FaultMaven runs on a single, deployment-agnostic **Core** — fair-source (FSL-1
 | **Knowledge Scopes** | Global + Personal | Global + Team + Personal |
 | **Infrastructure** | Fixed defaults (SQLite) | Fully managed (PostgreSQL, S3) |
 | **LLM Support** | All providers + local | All cloud providers |
-| **Security** | Local auth | SSO, RBAC |
+| **Security** | Local auth | SSO, enterprise isolation (RLS) |
 | **Cost** | Free | Free during beta |
 
 ---
